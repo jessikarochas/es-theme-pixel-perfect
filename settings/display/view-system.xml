@@ -1,0 +1,76 @@
+<!--
+Theme name:  Pixel Perfect
+Author:      Jessika Rocha
+Artwork:     Jessika Rocha
+Website:     games.jessikarocha.com
+-->
+
+<theme>
+  <formatVersion>7</formatVersion>
+
+  <view name="system">
+      
+      
+    <!-- CARDS POSITIONS -->
+    <carousel name="systemcarousel">
+      <origin>0.5 0</origin>
+      <pos>0.5 0</pos>
+      <defaultTransition>fade</defaultTransition> 
+      <systemInfoDelay>300</systemInfoDelay>
+      <size>1.1 1</size>
+      <logoSize>0.25 0.25</logoSize>
+      <logoScale>1.4</logoScale>
+      <maxLogoCount>4</maxLogoCount>
+      <logoPos>0.15 0.6</logoPos>
+      <zIndex>10</zIndex>
+    </carousel>
+
+    <!-- CONSOLE NAMES -->
+    <text name="systemFullName" extra="true">
+      <text>${system.fullName}</text>
+      <origin>0 0</origin>
+      <pos>0.08333 0.385</pos>     
+      <size>1 ${fontSizeBody-medium}</size> 
+      <fontPath>${fontBold}</fontPath>
+      <fontSize>${fontSizeBody-medium}</fontSize>
+      <lineSpacing>1</lineSpacing>
+      <alignment>left</alignment>
+      <forceUppercase>1</forceUppercase>
+      <zIndex>15</zIndex>
+    </text>
+
+    <!-- TOTAL GAMES -->
+    <text name="systemInfo">
+      <origin>0 0</origin>
+      <pos>0.08333 0.46</pos>
+      <size>0.866667 ${fontSizeBody-medium}</size> 
+      <fontSize>${fontSizeBody-medium}</fontSize>
+      <alignment>left</alignment>
+      <forceUppercase>1</forceUppercase>
+      <fontPath>${fontRegular}</fontPath>
+      <lineSpacing>1</lineSpacing>
+      <zIndex>15</zIndex>
+    </text>
+
+    <!-- LOGOS -->
+    <image name="logo">
+      <path>./assets/logos/${system.theme}.png</path>
+    </image>
+    <text name="logoText"> 
+      <origin>0 0</origin>
+      <fontPath>${fontRegular}</fontPath>
+      <fontSize>${fontSizeBody-medium}</fontSize>
+    </text>
+
+    <!-- BACKGROUND FRONT ART -->
+    <image name="background" extra="true">
+      <path>./background/default.png</path>
+      <size>1 1</size>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <tile>true</tile>
+      <zIndex>-50</zIndex>
+    </image>
+  </view>
+
+</theme>

@@ -1,0 +1,40 @@
+<!--
+Theme name:  Pixel Perfect
+Author:      Jessika Rocha
+Artwork:     Jessika Rocha
+Website:     games.jessikarocha.com
+
+Fonts used:  Retro Gamining, VCR OSD Mono
+
+# Thanks and Credits
+
+ARTWORK:
+Pixel Logos and Icons: 
+      - Starvingartist (Stanley Sy) [www.iconarchive.com]
+
+# License
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please see README.md for full details.
+-->
+
+<theme>
+  <formatVersion>7</formatVersion>
+
+  <!-- VARIABLES -->
+  <include>./variables.xml</include>
+    
+  <!-- COLOR DEFINITIONS -->
+  <include>./settings/colors/choco.xml</include>
+  <include>./settings/colors/scheme.xml</include>
+
+  <!-- LIGHT + DARK MODE SELCTION -->
+  <subset name="Style" displayName="Style">
+    <include name="dark" displayName="Dark" />
+    <include name="light" displayName="Light" />
+  </subset>
+
+  <!-- MORE SETTINGS -->
+  <include>./settings/display/view-general.xml</include> 
+  <include>./settings/display/view-system.xml</include>
+  <include>./settings/display/view-menu.xml</include>
+
+</theme>
