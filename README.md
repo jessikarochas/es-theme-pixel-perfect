@@ -2,6 +2,7 @@
 
 - [About](#about)
 - [Disclaimers](#disclaimers)
+- [Screenshots](#screenshots)
 - [License](#license)
 - [Made With](#made-with)
 
