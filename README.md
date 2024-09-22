@@ -18,6 +18,12 @@ The Pixel Perfect theme was designed exclusively for the retro handheld console 
 - If you have any questions I may not be able to answer them since I am not well versed on creating themes for Emulation Station. I will be happy to try but I can't garantee any solutions =)
 - Suggestions, inputs and contributions are appreciated.
 
+# Screenshots
+
+![home](./assets/screenshots/home.png)
+![gamelist01](./assets/screenshots/gamelist01.png)
+![gamelist02](./assets/screenshots/gamelist02.png)
+
 # License
 
 All [videogame and computer system logos](./assets/logos/) used are the property of their respective Developers/Producers/Distributors/Licensors.
