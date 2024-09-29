@@ -37,4 +37,13 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
   <include>./settings/display/view-system.xml</include>
   <include>./settings/display/view-menu.xml</include>
 
+  <view name="system">
+      <sound name="bgsound">
+         <!-- try ogg -->
+         <path>./assets/sounds/${system.theme}.ogg</path>
+         <!-- try mp3 -->
+         <path>./assets/sounds/${system.theme}.mp3</path>
+      </sound>
+  </view>
+
 </theme>
