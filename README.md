@@ -8,7 +8,7 @@
 
 
 # About
-The Pixel Perfect theme was designed exclusively for the retro handheld console R36S, running AMberELEC (It may work in other specifications but it may need adaptations, I did use it on ArkOS fine but have seen other people report to me that they weren't able to do so). 
+The Pixel Perfect theme was designed exclusively for the retro handheld console R36S, running AmberELEC (It may work in other specifications but it may need adaptations, I did use it on ArkOS fine but have seen other people report to me that they weren't able to do so). 
 
 <br>
 
