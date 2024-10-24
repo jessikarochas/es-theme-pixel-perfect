@@ -27,7 +27,7 @@ Website:     games.jessikarocha.com
     <fontSizeBody-small>0.03125</fontSizeBody-small> <!-- 10 -->
     <fontSizeCaption-small>0.028125</fontSizeCaption-small> <!-- 9 -->
     
-    <!-- Pixel Fonts -->
+    <!-- PIXEL FONTS -->
     <fontRegular>./assets/fonts/VCR_OSD_MONO_1.ttf</fontRegular>
     <fontBold>./assets/fonts/Crang.ttf</fontBold>
     <fontLight>./assets/fonts/VCR_OSD_MONO_1.001.ttf</fontLight>

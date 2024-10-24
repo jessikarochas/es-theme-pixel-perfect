@@ -11,11 +11,11 @@ Website:  games.jessikarocha.com
     <mainColor>8A715E</mainColor>
     <onMainColor>F7F3F0</onMainColor>
 
-    <bgColor ifSubset="Style:dark">57392d</bgColor>
-    <bgColor ifSubset="Style:light">F1E7D4</bgColor> <!--  -->
+    <bgColor ifSubset="Style:dark">1D1916</bgColor>
+    <bgColor ifSubset="Style:light">F7F3F0</bgColor>
 
     <sectColor ifSubset="Style:dark">a3907c</sectColor>
-    <sectColor ifSubset="Style:light">57392d</sectColor> <!--  -->
+    <sectColor ifSubset="Style:light">57392d</sectColor>
   </variables>
 
 </theme>

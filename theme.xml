@@ -4,13 +4,14 @@ Author:      Jessika Rocha
 Artwork:     Jessika Rocha
 Website:     games.jessikarocha.com
 
-Fonts used:  Retro Gamining, VCR OSD Mono
+Fonts used:  Crang, VCR OSD Mono
 
 # Thanks and Credits
 
 ARTWORK:
 Pixel Logos and Icons: 
       - Starvingartist (Stanley Sy) [www.iconarchive.com]
+      - Jessika Rocha [games.jessikarocha.com]
 
 # License
 This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please see README.md for full details.
@@ -21,10 +22,6 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 
   <!-- VARIABLES -->
   <include>./variables.xml</include>
-    
-  <!-- COLOR DEFINITIONS -->
-  <include>./settings/colors/choco.xml</include>
-  <include>./settings/colors/scheme.xml</include>
 
   <!-- LIGHT + DARK MODE SELCTION -->
   <subset name="Style" displayName="Style">
@@ -32,12 +29,72 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
     <include name="light" displayName="Light" />
   </subset>
 
-  <!-- MORE SETTINGS -->
-  <include>./settings/display/view-general.xml</include> 
-  <include>./settings/display/view-system.xml</include>
-  <include>./settings/display/view-menu.xml</include>
+  <!-- COLOR DEFINITIONS -->
+  <include>./settings/colors/choco.xml</include>
 
-  <view name="system">
+  <!-- FONT SIZE -->
+  <subset name="FontSize" displayName="Font Size">
+    <include name="medium" />
+    <include name="large" />
+    <include name="small" />
+  </subset>
+    
+  <subset name="Background Style" displayName="Background style">
+    <include name="default" displayName="Default" />
+    <include name="random" displayName="Random" />
+    <include name="custom" displayName="Custom" />
+  </subset>
+
+  <!-- BATTERY AND CLOCK ICONS+SETTINGS -->
+  <subset name="Status Bar" displayName="Status Bar">
+    <include name="complete" displayName="Clock + Battery" />
+    <include name="clock" displayName="Clock" />
+    <include name="battery" displayName="Battery" />
+    <include name="hidden" displayName="Hidden" />
+  </subset>
+
+  <!-- SCREEN RATIO -->
+  <subset name="Ratio" displayName="Screen ratio">
+    <include name="ratio32" ifArch="rg351p,amberelec-rg351p" displayName="3:2 (Default)" />
+    <include name="ratio43" ifArch="rg353p,rg351mp,rg351v,amberelec-rg353p,amberelec-rg351mp,amberelec-rg351v" displayName="4:3 (Default)" />
+    <include name="ratio53" ifArch="rg503,rg552,amberelec-rg503,amberelec-rg552" displayName="5:3 (Default)" />
+
+    <include name="ratio32" ifNotArch="handheld,rg503,rg552,rg351p,rg353p,rg351mp,rg351v,amberelec-rg503,amberelec-rg552,amberelec-rg351p,amberelec-rg353p,amberelec-rg351mp,amberelec-rg351v" displayName="3:2" />
+    <include name="ratio43" ifNotArch="handheld,rg503,rg552,rg351p,rg353p,rg351mp,rg351v,amberelec-rg503,amberelec-rg552,amberelec-rg351p,amberelec-rg353p,amberelec-rg351mp,amberelec-rg351v" displayName="4:3" />
+    <include name="ratio53" ifNotArch="handheld,rg503,rg552,rg351p,rg353p,rg351mp,rg351v,amberelec-rg503,amberelec-rg552,amberelec-rg351p,amberelec-rg353p,amberelec-rg351mp,amberelec-rg351v" displayName="5:3" />
+
+    <include name="ratio32" displayName="3:2" />
+    <include name="ratio43" displayName="4:3" />
+    <include name="ratio53" displayName="5:3" />
+  </subset>
+
+  <subset name="Grid Game Image" displayName="Grid Game Image" appliesTo="grid">
+    <include name="gridscreenshot" displayName="Screenshot" />
+    <include name="gridthumbnail" displayName="Thumbnail" />
+    <include name="gridlogo" displayName="Logo" />
+  </subset>
+
+  <subset name="VideoSnapshot" displayName="Video Snapshot" appliesTo="video, elementflix">
+    <include name="videoDefault" displayName="Adaptable" />
+    <include name="videoThumbnail" displayName="Thumbnail" />
+    <include name="videoScreenshot" displayName="Screenshot" />
+    <include name="videoMarquee" displayName="Marquee" />
+  </subset>
+
+  <!-- XML SETTINGS FILES -->
+  <include>./settings/colors/scheme.xml</include>
+  <include>./settings/display/view-general.xml</include>
+  <include>./settings/display/view-system.xml</include>
+  <include>./settings/display/view-basic.xml</include>
+  <include>./settings/display/view-detailed.xml</include>
+  <include>./settings/display/view-grid.xml</include>
+  <include>./settings/display/view-boxes.xml</include>
+  <include>./settings/display/view-video.xml</include>
+  <include>./settings/display/view-elementflix.xml</include>
+  <include>./settings/display/view-menu.xml</include>
+    
+ <!-- BACKGROUND SOUNDS --> 
+ <view name="system">
       <sound name="bgsound">
          <!-- try ogg -->
          <path>./assets/sounds/${system.theme}.ogg</path>

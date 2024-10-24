@@ -1,38 +1,63 @@
 <!--
 Theme name:  Pixel Perfect
-Author:      Jessika Rocha
-Artwork:     Jessika Rocha
-Website:     games.jessikarocha.com
+Author:   Jessika Rocha
+Website:  games.jessikarocha.com
 -->
 
 <theme>
   <formatVersion>7</formatVersion>
 
   <view name="system">
-      
-      
-    <!-- CARDS POSITIONS -->
+    <!-- CARDS -->
     <carousel name="systemcarousel">
       <origin>0.5 0</origin>
       <pos>0.5 0</pos>
-      <defaultTransition>fade</defaultTransition> 
+      <defaultTransition>fade</defaultTransition>
       <systemInfoDelay>300</systemInfoDelay>
+
       <size>1.1 1</size>
-      <logoSize>0.25 0.25</logoSize>
+      <size ifSubset="Ratio:ratio53">1.2 1</size>
+
+      <logoSize>0.2 0.2</logoSize>      
       <logoScale>1.4</logoScale>
-      <maxLogoCount>4</maxLogoCount>
-      <logoPos>0.15 0.6</logoPos>
+
+      <maxLogoCount>6</maxLogoCount>
+      <maxLogoCount ifSubset="Ratio:ratio53">5</maxLogoCount>
+
+      <logoPos>0.15 0.55</logoPos>
+      <logoPos ifSubset="Ratio:ratio43">0.15 0.6</logoPos>
+      <logoPos ifSubset="Ratio:ratio53">0.2 0.55</logoPos>
+
       <zIndex>10</zIndex>
     </carousel>
 
-    <!-- CONSOLE NAMES -->
-    <text name="systemFullName" extra="true">
+    <video name="carouselVideo" extra="true" ifSubset="PlayVideo:true">
+      <path>{random}</path>
+      <pos>0 0.25</pos>
+      <origin>0 0.5</origin>
+      <minSize>1 0.5</minSize>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <zIndex>-8</zIndex>
+      <delay>1.5</delay>
+
+      <storyboard>
+        <animation property="opacity" from="0" to="1" begin="0" duration="1000" mode="easeOut" />
+      </storyboard>
+    </video>
+
+    <!-- SYSTEMS -->
+    <text name="systemName" extra="true">
       <text>${system.fullName}</text>
       <origin>0 0</origin>
-      <pos>0.08333 0.385</pos>     
-      <size>1 ${fontSizeBody-medium}</size> 
+      <pos>0.08333 0.325</pos>      <!-- 480x320 / 48x 104y -->
+      <pos ifSubset="Ratio:ratio43">0.08333 0.375</pos>      <!-- 480x320 / 48x 104y -->
+      <size>0.866667 ${fontSizeH1-medium}</size>      <!-- 480x320 / 416x -->
       <fontPath>${fontBold}</fontPath>
-      <fontSize>${fontSizeBody-medium}</fontSize>
+
+      <fontSize>${fontSizeH1-medium}</fontSize>
+      <fontSize ifSubset="FontSize:large">${fontSizeH1-large}</fontSize>
+      <fontSize ifSubset="FontSize:small">${fontSizeH1-small}</fontSize>
+
       <lineSpacing>1</lineSpacing>
       <alignment>left</alignment>
       <forceUppercase>1</forceUppercase>
@@ -42,9 +67,14 @@ Website:     games.jessikarocha.com
     <!-- TOTAL GAMES -->
     <text name="systemInfo">
       <origin>0 0</origin>
-      <pos>0.08333 0.46</pos>
-      <size>0.866667 ${fontSizeBody-medium}</size> 
+      <pos>0.08333 0.41</pos>
+      <pos ifSubset="Ratio:ratio43">0.08333 0.46</pos>
+      <size>0.866667 ${fontSizeBody-medium}</size>      <!-- 480x320 / 416x -->
+
       <fontSize>${fontSizeBody-medium}</fontSize>
+      <fontSize ifSubset="FontSize:large">${fontSizeBody-large}</fontSize>
+      <fontSize ifSubset="FontSize:small">${fontSizeBody-small}</fontSize>
+
       <alignment>left</alignment>
       <forceUppercase>1</forceUppercase>
       <fontPath>${fontRegular}</fontPath>
@@ -54,23 +84,147 @@ Website:     games.jessikarocha.com
 
     <!-- LOGOS -->
     <image name="logo">
+      <path>./assets/logos/${system.theme}.svg</path>
       <path>./assets/logos/${system.theme}.png</path>
     </image>
-    <text name="logoText"> 
+
+    <text name="logoText">
       <origin>0 0</origin>
       <fontPath>${fontRegular}</fontPath>
       <fontSize>${fontSizeBody-medium}</fontSize>
+      <fontSize ifSubset="FontSize:large">${fontSizeBody-large}</fontSize>
+      <fontSize ifSubset="FontSize:small">${fontSizeBody-small}</fontSize>
     </text>
 
-    <!-- BACKGROUND FRONT ART -->
+    <!-- SYSTEM BACKGROUND -->
     <image name="background" extra="true">
-      <path>./background/default.png</path>
+      <path>./assets/background.png</path>
       <size>1 1</size>
       <origin>0 0</origin>
       <pos>0 0</pos>
       <tile>true</tile>
       <zIndex>-50</zIndex>
     </image>
+
+    <!-- BACKGROUND FRONT ART -->
+    <image name="cover" extra="true">
+      <path>{random:image}</path>
+      <path>./assets/systems/${system.theme}.webp</path>
+      <size>1 0</size>
+      <origin>0 0.5</origin>
+      <pos>0 0.25</pos>
+      <zIndex>-9</zIndex>
+      <storyboard>
+        <animation property="opacity" from="0" to="1" begin="0" duration="1000" mode="easeOut" />
+      </storyboard>
+    </image>
+
+    <image name="cover" extra="true" ifSubset="Background Style:custom">
+      <path>./customBackground/${system.theme}.jpg</path>
+      <path>./customBackground/${system.theme}.jpeg</path>
+      <path>./customBackground/${system.theme}.png</path>
+      <path>./customBackground/${system.theme}.webp</path>
+    </image>
+
+    <image name="cover_general" extra="true" ifSubset="Background Style:custom">
+      <path ifSubset="Style:dark">./background/default-dark.png</path>
+      <path ifSubset="Style:light">./background/default-light.png</path>
+      <size>1 0</size>
+      <origin>0 0</origin>
+      <pos>0 0.</pos>
+      <zIndex>-9</zIndex>
+    </image>
   </view>
 
+  <view name="system, basic, detailed, grid">
+    <image name="osdBackground" extra="true">
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <size>1 1</size>
+
+      <path ifSubset="Ratio:ratio32">./assets/ratio32/osd-bg.png</path>
+      <path ifSubset="Ratio:ratio43">./assets/ratio43/osd-bg.png</path>
+      <path ifSubset="Ratio:ratio53">./assets/ratio53/osd-bg.png</path>
+
+      <visible ifSubset="Status Bar:hidden">false</visible>
+      <zIndex>100</zIndex>
+    </image>
+  </view>
+
+  <view name="screen">
+    <text name="clock">
+      <origin>0 0.5</origin>
+      <pos>0 0.0375</pos>      <!-- 480x320 / 0x 12y-->
+      <pos ifSubset="Ratio:ratio43">0 0.0375</pos>      <!-- 480x320 / 0x 16y-->
+      <pos ifSubset="Ratio:ratio53">0 0.041666667</pos>      <!-- 480x320 / 0x 4y-->
+
+      <size>0.84 0</size>      <!-- 480x320 / 424x-->
+      <size ifSubset="Ratio:ratio43">0.83 0</size>      <!-- 640x480 / 544x-->
+      <size ifSubset="Ratio:ratio53">0.84 0</size>      <!-- 640x480 / 544x-->
+
+      <size ifSubset="Status Bar:clock">0.966667 0</size>      <!-- 480x320 / 432x-->
+
+      <fontSize>${fontSizeCaption-medium}</fontSize>
+      <fontSize ifSubset="Ratio:ratio53">${fontSizeBody-medium}</fontSize>
+      <!-- <backgroundColor>ff0000</backgroundColor> -->
+
+      <fontPath>${fontRegular}</fontPath>
+      <lineSpacing>1</lineSpacing>
+      <alignment>right</alignment>
+
+      <visible ifSubset="Status Bar:hidden|battery">false</visible>
+    </text>
+
+    <batteryIndicator name="batteryIndicator">
+      <pos>0.93 0.0125</pos>      <!-- 480x320 / 456x (from right to left) 4y-->
+      <size>0.05</size>      <!-- 16x 16y-->
+      <visible ifSubset="Status Bar:hidden|clock">false</visible>
+      <itemSpacing>0.008333333</itemSpacing>
+
+      <!-- Assets -->
+      <full>./assets/icons/screen/16x16/battery=full.svg</full>
+      <at75>./assets/icons/screen/16x16/battery=75.svg</at75>
+      <at50>./assets/icons/screen/16x16/battery=50.svg</at50>
+      <at25>./assets/icons/screen/16x16/battery=25.svg</at25>
+      <empty>./assets/icons/screen/16x16/battery=empty.svg</empty>
+      <incharge>./assets/icons/screen/16x16/battery=charging.svg</incharge>
+      <networkIcon>./assets/icons/screen/16x16/wifi=on.svg</networkIcon>
+    </batteryIndicator>
+
+    <batteryIndicator name="batteryIndicator" ifSubset="Ratio:ratio43">
+      <size>0.05</size>      <!-- 24x 24y-->
+      <visible ifSubset="Status Bar:hidden|clock">false</visible>
+
+      <!-- Assets -->
+      <full>./assets/icons/screen/24x24/battery=full.svg</full>
+      <at75>./assets/icons/screen/24x24/battery=75.svg</at75>
+      <at50>./assets/icons/screen/24x24/battery=50.svg</at50>
+      <at25>./assets/icons/screen/24x24/battery=25.svg</at25>
+      <empty>./assets/icons/screen/24x24/battery=empty.svg</empty>
+      <incharge>./assets/icons/screen/24x24/battery=charging.svg</incharge>
+      <networkIcon>./assets/icons/screen/24x24/wifi=on.svg</networkIcon>
+    </batteryIndicator>
+
+    <batteryIndicator name="batteryIndicator" ifSubset="Ratio:ratio53">
+      <size>0.0625</size>      <!-- 72x 72y-->
+      <visible ifSubset="Status Bar:hidden|clock">false</visible>
+
+      <!-- ASSETS -->
+      <full>./assets/icons/screen/72x72/battery=full.svg</full>
+      <at75>./assets/icons/screen/72x72/battery=75.svg</at75>
+      <at50>./assets/icons/screen/72x72/battery=50.svg</at50>
+      <at25>./assets/icons/screen/72x72/battery=25.svg</at25>
+      <empty>./assets/icons/screen/72x72/battery=empty.svg</empty>
+      <incharge>./assets/icons/screen/72x72/battery=charging.svg</incharge>
+      <networkIcon>./assets/icons/screen/72x72/wifi=on.svg</networkIcon>
+    </batteryIndicator>
+
+    <controllerActivity name="controllerActivity">
+      <origin>0 0</origin>
+      <pos>0.016666 0.025</pos>
+      <size>0.025</size>
+      <itemSpacing>0.003</itemSpacing>
+      <imagePath>./assets/pin.svg</imagePath>
+    </controllerActivity>
+  </view>
 </theme>

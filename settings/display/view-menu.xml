@@ -1,38 +1,47 @@
 <!--
 Theme name:  Pixel Perfect
-Author:      Jessika Rocha
-Artwork:     Jessika Rocha
-Website:     games.jessikarocha.com
+Author:   Jessika Rocha
+Website:  games.jessikarocha.com
 -->
 
 <theme>
   <formatVersion>7</formatVersion>
 
-  <!-- SETTINGS -->
+  <!-- MENU -->
   <view name="menu">
     <menuText name="menutext">
       <fontPath>${fontRegular}</fontPath>
       <fontSize>${fontSizeBody-medium}</fontSize>
+      <fontSize ifSubset="FontSize:large">${fontSizeBody-large}</fontSize>
+      <fontSize ifSubset="FontSize:small">${fontSizeBody-small}</fontSize>
     </menuText>
 
     <menuTextSmall name="menutextsmall">
       <fontPath>${fontLight}</fontPath>
       <fontSize>${fontSizeCaption-medium}</fontSize>
+      <fontSize ifSubset="FontSize:large">${fontSizeCaption-large}</fontSize>
+      <fontSize ifSubset="FontSize:small">${fontSizeCaption-small}</fontSize>
     </menuTextSmall>
 
     <menuGroup name="menugroup">
       <fontPath>${fontRegular}</fontPath>
       <fontSize>${fontSizeCaption-medium}</fontSize>
+      <fontSize ifSubset="FontSize:large">${fontSizeCaption-large}</fontSize>
+      <fontSize ifSubset="FontSize:small">${fontSizeCaption-small}</fontSize>
     </menuGroup>
 
     <menuText name="menutitle">
       <fontPath>${fontBold}</fontPath>
       <fontSize>${fontSizeH2-medium}</fontSize>
+      <fontSize ifSubset="FontSize:large">${fontSizeH2-large}</fontSize>
+      <fontSize ifSubset="FontSize:small">${fontSizeH2-small}</fontSize>
     </menuText>
 
     <menuBackground name="menubg">
       <fadePath>./assets/fade.png</fadePath>
-      <path>./assets/ratio43/menu.png</path>
+      <path ifSubset="Ratio:ratio32">./assets/ratio32/menu.png</path>
+      <path ifSubset="Ratio:ratio43">./assets/ratio43/menu.png</path>
+      <path ifSubset="Ratio:ratio53">./assets/ratio53/menu.png</path>
       <size>1 1</size>
     </menuBackground>
 
@@ -49,6 +58,8 @@ Website:     games.jessikarocha.com
     <menuText name="menufooter">
       <fontPath>${fontBold}</fontPath>
       <fontSize>${fontSizeCaption-medium}</fontSize>
+      <fontSize ifSubset="FontSize:large">${fontSizeCaption-large}</fontSize>
+      <fontSize ifSubset="FontSize:small">${fontSizeCaption-small}</fontSize>
     </menuText>
 
     <menuIcons name="menuicons">

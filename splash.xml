@@ -1,0 +1,38 @@
+<!--
+Theme name:  Pixel Perfect
+Author:      Jessika Rocha
+Artwork:     Jessika Rocha
+Website:     games.jessikarocha.com
+-->
+
+<theme>
+  <formatVersion>7</formatVersion>
+
+  <view name="splash">
+    <splash name="splash">
+      <backgroundColor>000000</backgroundColor>
+    </splash>
+
+    <image name="background">
+    </image>
+    <image name="progressbar">
+      <color>000000</color>
+      <origin>0.5 1</origin>
+      <pos>0.5 1</pos>
+      <maxSize>1 0.00625</maxSize>
+      <minSize>1 0.00625</minSize>
+    </image>
+    <image name="progressbar:active">
+      <color>AAAAAA</color>
+      <tile>true</tile>
+    </image>
+    <text name="label">
+      <alignment>center</alignment>
+      <fontPath>./assets/fonts/VCR_OSD_MONO_1.001.ttf</fontPath> <!-- PIXEL FONT -->
+      <fontSize>0.0375</fontSize> <!-- 12-->
+      <color>ffffff</color>
+      <origin>0.5 1</origin>
+      <pos>0.5 0.95</pos>
+    </text>
+  </view>
+</theme>
