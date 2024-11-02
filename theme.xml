@@ -38,6 +38,12 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
     <include name="large" />
     <include name="small" />
   </subset>
+
+  <!-- BACKGROUND SOUND ACTIVATION -->
+  <subset name="BackgroundSound" displayName="Background Sound">
+    <include name="inactive (restart EmulationStation)" />
+    <include name="active (restart EmulationStation)" />
+  </subset>
     
   <subset name="Background Style" displayName="Background style">
     <include name="default" displayName="Default" />
@@ -95,7 +101,7 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
     
  <!-- BACKGROUND SOUNDS --> 
  <view name="system">
-      <sound name="bgsound">
+      <sound ifSubset="BackgroundSound:active" name="bgsound">
          <!-- try ogg -->
          <path>./assets/sounds/${system.theme}.ogg</path>
          <!-- try mp3 -->
