@@ -31,20 +31,6 @@ Website:  games.jessikarocha.com
       <zIndex>10</zIndex>
     </carousel>
 
-    <video name="carouselVideo" extra="true" ifSubset="PlayVideo:true">
-      <path>{random}</path>
-      <pos>0 0.25</pos>
-      <origin>0 0.5</origin>
-      <minSize>1 0.5</minSize>
-      <showSnapshotNoVideo>true</showSnapshotNoVideo>
-      <zIndex>-8</zIndex>
-      <delay>1.5</delay>
-
-      <storyboard>
-        <animation property="opacity" from="0" to="1" begin="0" duration="1000" mode="easeOut" />
-      </storyboard>
-    </video>
-
     <!-- SYSTEMS -->
     <text name="systemName" extra="true">
       <text>${system.fullName}</text>
