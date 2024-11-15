@@ -157,13 +157,22 @@ Website:  games.jessikarocha.com
       <roundCorners>0.03</roundCorners>
       <zIndex>5</zIndex>
     </video>
+      
+    <text name="md_gametime">
+      <fontSize>0.029</fontSize>
+      <size>0.09</size>
+      <pos>0.53 0.83125</pos>
+      <visible>true</visible>
+      <color>${sectColor}</color>
+      <fontPath>${fontLight}</fontPath>
+    </text>
 
     <rating name="md_rating">
       <origin>0 0</origin>
 
-      <pos>0.61 0.83125</pos>      <!-- 480x320 / 304x 272y-->
-      <pos ifSubset="Ratio:ratio43">0.6075 0.83125</pos>
-      <pos ifSubset="Ratio:ratio53">0.62 0.83125</pos>
+      <pos>0.70 0.83125</pos>      <!-- 480x320 / 304x 272y-->
+      <pos ifSubset="Ratio:ratio43">0.6975 0.83125</pos>
+      <pos ifSubset="Ratio:ratio53">0.71 0.83125</pos>
 
       <size>0.075</size>
       <size ifSubset="Ratio:ratio43">0.066667</size>
