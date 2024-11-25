@@ -5,34 +5,45 @@ Artwork:     Jessika Rocha
 Website:     games.jessikarocha.com
 -->
 
+<?xml version="1.0" encoding="UTF-8"?>
 <theme>
-  <formatVersion>7</formatVersion>
+    <formatVersion>7</formatVersion>
+	<include>./theme.xml</include>    
+    <view name="splash">
+        <image name="background" visible="false"/>
 
-  <view name="splash">
-    <splash name="splash">
-      <backgroundColor>000000</backgroundColor>
-    </splash>
+        <image name="background_extra" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <zIndex>0</zIndex>
+            <visible>true</visible>
+            <path ifSubset="Style:dark">./assets/splash/default-dark.png</path>
+            <path ifSubset="Style:light">./assets/splash/default-light.png</path>
+        </image>
 
-    <image name="background">
-    </image>
-    <image name="progressbar">
-      <color>000000</color>
-      <origin>0.5 1</origin>
-      <pos>0.5 1</pos>
-      <maxSize>1 0.00625</maxSize>
-      <minSize>1 0.00625</minSize>
-    </image>
-    <image name="progressbar:active">
-      <color>AAAAAA</color>
-      <tile>true</tile>
-    </image>
-    <text name="label">
-      <alignment>center</alignment>
-      <fontPath>./assets/fonts/VCR_OSD_MONO_1.001.ttf</fontPath> <!-- PIXEL FONT -->
-      <fontSize>0.0375</fontSize> <!-- 12-->
-      <color>ffffff</color>
-      <origin>0.5 1</origin>
-      <pos>0.5 0.95</pos>
-    </text>
-  </view>
+        <text name="label">
+            <color>F7F3F0</color>
+            <forceUppercase>false</forceUppercase>
+            <fontPath>./assets/fonts/VCR_OSD_MONO_1.001.ttf</fontPath> <!-- PIXEL FONT -->
+            <zIndex>500</zIndex>
+        </text>
+
+		<image name="progressbar">
+			<origin>0 0</origin>
+			<pos>0.250 0.703</pos>
+			<rotation>0</rotation>
+			<rotationOrigin>1.1 1.6</rotationOrigin>
+			<color>F7F3F0</color>
+		</image>        
+
+		<image name="progressbar:active">
+            <pos>0.250 0.703</pos>
+			<color>1D1916</color>
+			<colorEnd>1D1916</colorEnd>
+			<gradientType>vertical</gradientType>
+		</image>
+
+    </view>
+
 </theme>
